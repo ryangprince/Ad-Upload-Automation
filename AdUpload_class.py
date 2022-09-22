@@ -75,6 +75,7 @@ class AdUpload:
 
         # creates dictionary with column headers as keys and stores in dict_list
         self.dict_list = self.df.to_dict('records')
+        # print(self.dict_list)
 
         # set fields where data will be same for every placement by confirming tag sheet type using column headers
         # unique to each type of tag sheet
@@ -278,8 +279,8 @@ class AdUpload:
                             if creative.find('480x320') != -1:
                                 row['Creative Name'] = creative
 
-# create new csv that appears in same folder in as tag sheet with naming convention of 
-# tag_sheet_name_Ad_Upload.csv
+    # create new csv that appears in same folder in as tag sheet with naming convention of 
+    # tag_sheet_name_Ad_Upload.csv
     def create_new_csv(self):
         directory = self.file_path + '_Ad_Upload.csv'  
         with open(directory, 'w', newline='') as new_csv:  # include newline='' prevents empty rows after each dict is written        
@@ -288,5 +289,3 @@ class AdUpload:
             new_csv_writer.writeheader()
             for row in self.csv_dict:
                 new_csv_writer.writerow(row)
-
-
