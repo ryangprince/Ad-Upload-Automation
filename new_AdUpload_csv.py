@@ -4,7 +4,8 @@ from AdUpload_class import AdUpload
 # example: '/Users/ryanprince/Downloads/NEW ASSETS_TruFuel March-November 2022/Tags_TRUFUEL010CP_Cluep_Video_1x1s_092022.xls'
 file_path = '/Users/ryanprince/Downloads/Kustomer - Test - Q3Q4 22/Tags_KU_2H2022_MAoM P1 Campaign_Cluep.xls'
 
-# domain_name.com OR domain_name.gov OR domain_name.net... etc.
+# for US domains: domain_name.com OR domain_name.gov OR domain_name.net... etc.
+# for non-US domains: domain_name.ca OR domain_name.fr OR domain_name.uk... etc.
 # example: lexus.com
 ad_domain = 'kustomer.com'
 
