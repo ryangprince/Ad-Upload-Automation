@@ -282,7 +282,8 @@ class AdUpload:
     # create new csv that appears in same folder in as tag sheet with naming convention of 
     # tag_sheet_name_Ad_Upload.csv
     def create_new_csv(self):
-        directory = self.file_path + '_Ad_Upload.csv'  
+        file_path = self.file_path.split('.', 1)[0]
+        directory = file_path + '_AD_UPLOAD.csv'  
         with open(directory, 'w', newline='') as new_csv:  # include newline='' prevents empty rows after each dict is written        
 
             new_csv_writer = csv.DictWriter(new_csv, fieldnames=self.header_names)
